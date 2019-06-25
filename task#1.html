@@ -121,6 +121,8 @@
             event.target.appendChild(document.getElementById(data));
             score01.innerHTML = b++;
             one.innerHTML = "[1]";
+            TestWinner(b);
+
         }
         //---------------------------------------------------------
         function allowDrop2(event) {
@@ -137,6 +139,8 @@
             event.target.appendChild(document.getElementById(data));
             score01.innerHTML = b++;
             two.innerHTML = "[2]";
+            TestWinner(b);
+
         }
         //------------------------------------------------------------
         function allowDrop3(event) {
@@ -153,6 +157,8 @@
             event.target.appendChild(document.getElementById(data));
             score01.innerHTML = b++;
             three.innerHTML = "[3]";
+            TestWinner(b);
+
         }
         //-------------------------------------------------------------
         function allowDrop4(event) {
@@ -169,6 +175,8 @@
             event.target.appendChild(document.getElementById(data));
             score01.innerHTML = b++;
             four.innerHTML = "[4]";
+            TestWinner(b);
+
         }
         //-------------------------------------------------------------
         function allowDrop5(event) {
@@ -185,6 +193,8 @@
             event.target.appendChild(document.getElementById(data));
             score01.innerHTML = b++;
             five.innerHTML = "[5]";
+            TestWinner(b);
+
         }
         //-------------------------------------------------------------
         function allowDrop6(event) {
@@ -201,6 +211,8 @@
             event.target.appendChild(document.getElementById(data));
             score01.innerHTML = b++;
             six.innerHTML = "[6]";
+            TestWinner(b);
+
         }
         //-------------------------------------------------------------
         function allowDrop7(event) {
@@ -217,6 +229,8 @@
             event.target.appendChild(document.getElementById(data));
             score01.innerHTML = b++;
             seven.innerHTML = "[7]";
+            TestWinner(b);
+
         }
         //-------------------------------------------------------------
         function allowDrop8(event) {
@@ -233,6 +247,8 @@
             event.target.appendChild(document.getElementById(data));
             score01.innerHTML = b++;
             eight.innerHTML = "[8]";
+            TestWinner(b);
+
         }
         //-------------------------------------------------------------
         function allowDrop9(event) {
@@ -249,6 +265,8 @@
             event.target.appendChild(document.getElementById(data));
             score01.innerHTML = b++;
             nine.innerHTML = "[9]";
+            TestWinner(b);
+
         }
         //-------------------------------------------------------------
         function allowDrop10(event) {
@@ -265,6 +283,16 @@
             event.target.appendChild(document.getElementById(data));
             score01.innerHTML = b++;
             ten.innerHTML = "[10]";
+            TestWinner(b);
+
+        }
+        //-------------------------------------------------------------
+        function TestWinner(valid) {
+            console.log(valid)
+
+            if (valid == 11) {
+                alert(" congratulation you are Winner ^_^");
+            }
         }
         //-------------------------------------------------------------
     </script>
