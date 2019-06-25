@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!-- document type -->
+<html lang="en">
+<!-- english language -->
+
+<head>
+    <title>CSS Template</title>
+    <!-- meta for information an description -->
+    <meta charset="utf-8">
+    <meta name="width=device-width, initial-scale=1">
+    <!-- HTML style CSS -->
+    <!-- first make the margion 0 (clear it) then control it -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("C:/Users/DELL/Desktop/Training/background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0%;
+        }
+        
+        #box01 {
+            position: absolute;
+            width: 75px;
+            height: 15px;
+            padding: 10px;
+            top: 350px;
+            left: 50px;
+            border: 1px solid rgba(243, 9, 9, 0.644);
+            background-color: rgba(192, 66, 35, 0.356);
+        }
+        
+        #box02 {
+            position: absolute;
+            width: 75pc;
+            height: 15px;
+            padding: 10px;
+            top: 350px;
+            left: 360px;
+            border: 1px solid black;
+        }
+        
+        #header {
+            border: 1px solid black;
+            background-color: #E0DF85;
+            padding: 30px;
+            text-align: center;
+            font-size: 20px;
+            color: #36575E;
+            margin: 0%;
+            margin-left: 1%;
+            margin-right: 1%;
+            margin-top: 1%;
+        }
+        
+        #par {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px;
+            margin: 0%;
+            margin-left: 2%;
+            margin-right: 2%;
+            margin-top: 2%;
+        }
+        
+        #div1 {
+            position: absolute;
+            width: 310px;
+            height: 310px;
+            padding: 10px;
+            top: 350px;
+            left: 360px;
+            border: 1px solid rebeccapurple;
+            background-color: rgb(69, 224, 64);
+        }
+        
+        #div2 {
+            position: absolute;
+            width: 310px;
+            height: 310px;
+            padding: 10px;
+            top: 350px;
+            right: 360px;
+            border: 1px solid rebeccapurple;
+            background-color: turquoise;
+        }
+        
+        .Sameline {
+            display: inline-block;
+            border: 2px solid rgba(0, 128, 0, 0.021);
+            padding: 2px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        var b = 0;
+        b++;
+
+        function allowDrop1(event) {
+            event.preventDefault();
+        }
+
+        function drag1(event) {
+            event.dataTransfer.setData("one", event.target.id);
+        }
+
+        function drop1(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("one");
+            event.target.appendChild(document.getElementById(data));
+            score01.innerHTML = b++;
+            one.innerHTML = "[1]";
+        }
+        //---------------------------------------------------------
+        function allowDrop2(event) {
+            event.preventDefault();
+        }
+
+        function drag2(event) {
+            event.dataTransfer.setData("two", event.target.id);
+        }
+
+        function drop2(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("two");
+            event.target.appendChild(document.getElementById(data));
+            score01.innerHTML = b++;
+            two.innerHTML = "[2]";
+        }
+        //------------------------------------------------------------
+        function allowDrop3(event) {
+            event.preventDefault();
+        }
+
+        function drag3(event) {
+            event.dataTransfer.setData("three", event.target.id);
+        }
+
+        function drop3(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("three");
+            event.target.appendChild(document.getElementById(data));
+            score01.innerHTML = b++;
+            three.innerHTML = "[3]";
+        }
+        //-------------------------------------------------------------
+        function allowDrop4(event) {
+            event.preventDefault();
+        }
+
+        function drag4(event) {
+            event.dataTransfer.setData("four", event.target.id);
+        }
+
+        function drop4(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("four");
+            event.target.appendChild(document.getElementById(data));
+            score01.innerHTML = b++;
+            four.innerHTML = "[4]";
+        }
+        //-------------------------------------------------------------
+        function allowDrop5(event) {
+            event.preventDefault();
+        }
+
+        function drag5(event) {
+            event.dataTransfer.setData("five", event.target.id);
+        }
+
+        function drop5(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("five");
+            event.target.appendChild(document.getElementById(data));
+            score01.innerHTML = b++;
+            five.innerHTML = "[5]";
+        }
+        //-------------------------------------------------------------
+        function allowDrop6(event) {
+            event.preventDefault();
+        }
+
+        function drag6(event) {
+            event.dataTransfer.setData("six", event.target.id);
+        }
+
+        function drop6(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("six");
+            event.target.appendChild(document.getElementById(data));
+            score01.innerHTML = b++;
+            six.innerHTML = "[6]";
+        }
+        //-------------------------------------------------------------
+        function allowDrop7(event) {
+            event.preventDefault();
+        }
+
+        function drag7(event) {
+            event.dataTransfer.setData("seven", event.target.id);
+        }
+
+        function drop7(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("seven");
+            event.target.appendChild(document.getElementById(data));
+            score01.innerHTML = b++;
+            seven.innerHTML = "[7]";
+        }
+        //-------------------------------------------------------------
+        function allowDrop8(event) {
+            event.preventDefault();
+        }
+
+        function drag8(event) {
+            event.dataTransfer.setData("eight", event.target.id);
+        }
+
+        function drop8(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("eight");
+            event.target.appendChild(document.getElementById(data));
+            score01.innerHTML = b++;
+            eight.innerHTML = "[8]";
+        }
+        //-------------------------------------------------------------
+        function allowDrop9(event) {
+            event.preventDefault();
+        }
+
+        function drag9(event) {
+            event.dataTransfer.setData("nine", event.target.id);
+        }
+
+        function drop9(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("nine");
+            event.target.appendChild(document.getElementById(data));
+            score01.innerHTML = b++;
+            nine.innerHTML = "[9]";
+        }
+        //-------------------------------------------------------------
+        function allowDrop10(event) {
+            event.preventDefault();
+        }
+
+        function drag10(event) {
+            event.dataTransfer.setData("ten", event.target.id);
+        }
+
+        function drop10(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("ten");
+            event.target.appendChild(document.getElementById(data));
+            score01.innerHTML = b++;
+            ten.innerHTML = "[10]";
+        }
+        //-------------------------------------------------------------
+    </script>
+</head>
+
+<body>
+    <p>Score: <text id="score01">0</text></p>
+
+    <h1 id="header" class="header"> Exploring Computer Science : Macthing Activity <br><br> Match the terms and definitions <br></h1>
+    <div id="div1">
+        <div class="box02 Sameline" ondrop="drop1(event)"><text ondragstart="drag1(event)" draggable="true" id="target01">[1]</text></div>
+        <div class="box02 Sameline" ondrop="drop2(event)"><text ondragstart="drag2(event)" draggable="true" id="target02">[2]</text></div>
+        <br/>
+        <div class="box02 Sameline" ondrop="drop3(event)"><text ondragstart="drag3(event)" draggable="true" id="target03">[3]</text></div>
+        <div class="box02 Sameline" ondrop="drop4(event)"><text ondragstart="drag4(event)" draggable="true" id="target04">[4]</text></div>
+        <br/>
+        <div class="box02 Sameline" ondrop="drop5(event)"><text ondragstart="drag5(event)" draggable="true" id="target05">[5]</text></div>
+        <div class="box02 Sameline" ondrop="drop6(event)"><text ondragstart="drag6(event)" draggable="true" id="target06">[6]</text></div>
+        <br/>
+        <div class="box02 Sameline" ondrop="drop7(event)"><text ondragstart="drag7(event)" draggable="true" id="target05">[7]</text></div>
+        <div class="box02 Sameline" ondrop="drop8(event)"><text ondragstart="drag8(event)" draggable="true" id="target06">[8]</text></div>
+        <br/>
+        <div class="box02 Sameline" ondrop="drop9(event)"><text ondragstart="drag9(event)" draggable="true" id="target05">[9]</text></div>
+        <div class="box02 Sameline" ondrop="drop10(event)"><text ondragstart="drag10(event)" draggable="true" id="target06">[10]</text></div>
+        <br/>
+
+
+    </div>
+
+
+    <div id="div2">
+        <div class="box01 Sameline" ondrop="drop1(event)" ondragover="allowDrop1(event)" id="one"><pre>one  </pre></div>
+        <div class="box01 Sameline" ondrop="drop2(event)" ondragover="allowDrop2(event)" id="two"><pre>two</pre></div>
+        <br/>
+        <div class="box01 Sameline" ondrop="drop3(event)" ondragover="allowDrop3(event)" id="three"><pre>three</pre></div>
+        <div class="box01 Sameline" ondrop="drop4(event)" ondragover="allowDrop4(event)" id="four"><pre>four </pre></div>
+        <br/>
+        <div class="box01 Sameline" ondrop="drop5(event)" ondragover="allowDrop5(event)" id="five"><pre>five </pre></div>
+        <div class="box01 Sameline" ondrop="drop6(event)" ondragover="allowDrop6(event)" id="six"><pre>six  </pre></div>
+        <br/>
+        <div class="box01 Sameline" ondrop="drop7(event)" ondragover="allowDrop7(event)" id="seven"><pre>seven</pre></div>
+        <div class="box01 Sameline" ondrop="drop8(event)" ondragover="allowDrop8(event)" id="eight"><pre>eight</pre></div>
+        <br/>
+        <div class="box01 Sameline" ondrop="drop9(event)" ondragover="allowDrop9(event)" id="nine"><pre>nine </pre></div>
+        <div class="box01 Sameline" ondrop="drop10(event)" ondragover="allowDrop10(event)" id="ten"><pre>ten  </pre></div>
+
+
+    </div>
+
+
+
+    <img src="C:/Users/DELL/Desktop/Training/tree.png" alt="Smiley face" style="float: right; margin-top: 170px;">
+
+
+
+
+
+</body>
+
+</html>
