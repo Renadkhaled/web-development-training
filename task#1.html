@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE HTMl>
 <!-- document type -->
 <html lang="en">
 <!-- english language -->
+<Html>
 
 <head>
     <title>CSS Template</title>
@@ -13,41 +14,15 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-image: url("C:/Users/DELL/Desktop/Training/background.jpg");
+            background-color: #FFFFFD;
             background-repeat: no-repeat;
             background-size: cover;
             margin: 0%;
         }
         
-        #box01 {
-            display: inline-block;
-            position: fixed;
-            padding: 2px;
-            margin: 0;
-            margin-left: 70px;
-            margin-bottom: 3px;
-            margin-top: 10px;
-            height: 40px;
-            width: 50px;
-            background-color: azure;
-        }
-        
-        #box02 {
-            display: inline-block;
-            position: fixed;
-            padding: 2px;
-            margin: 0;
-            margin-left: 70px;
-            margin-bottom: 3px;
-            margin-top: 10px;
-            height: 40px;
-            width: 50px;
-            background-color: azure;
-        }
-        
         #header {
             border: 1px solid black;
-            background-color: #E0DF85;
+            background-color: #ECEDF2;
             padding: 30px;
             text-align: center;
             font-size: 20px;
@@ -67,24 +42,6 @@
             margin-top: 2%;
         }
         
-        #div1 {
-            position: absolute;
-            width: 400px;
-            height: 310px;
-            top: 350px;
-            left: 360px;
-            background-color: rgb(69, 224, 64);
-        }
-        
-        #div2 {
-            position: absolute;
-            width: 400px;
-            height: 310px;
-            top: 350px;
-            right: 360px;
-            background-color: turquoise;
-        }
-        
         #Score {
             position: absolute;
             width: 80px;
@@ -97,281 +54,415 @@
             font-size: 20px;
         }
         
-        .Sameline {
-            display: inline-block;
-            padding: 2px;
-            margin: 0;
-            margin-left: 100px;
-            margin-bottom: 22px;
-            height: 40px;
-            width: 50px;
-            background-color: azure;
+        .largeDiv {
+            position: relative;
+            float: left;
+            width: 400px;
+            height: 415px;
+            border: solid green;
+            margin-top: 100px;
+            margin-left: 300px;
+        }
+        
+        .smallDiv1 {
+            position: absolute;
+            width: 100px;
+            height: 35px;
+            top: 15px;
+            left: 40px;
+            margin: 0%;
+            padding: 15px;
+        }
+        
+        .smallDiv2 {
+            position: absolute;
+            width: 100px;
+            height: 35px;
+            top: 15px;
+            right: 40px;
+            margin: 0%;
+            padding: 15px;
+        }
+        
+        .smallDiv3 {
+            position: absolute;
+            width: 100px;
+            height: 35px;
+            top: 95px;
+            left: 40px;
+            margin: 0%;
+            padding: 15px;
+        }
+        
+        .smallDiv4 {
+            position: absolute;
+            width: 100px;
+            height: 35px;
+            top: 95px;
+            right: 40px;
+            margin: 0%;
+            padding: 15px;
+        }
+        
+        .smallDiv5 {
+            position: absolute;
+            width: 100px;
+            height: 35px;
+            top: 175px;
+            left: 40px;
+            margin: 0%;
+            padding: 15px;
+        }
+        
+        .smallDiv6 {
+            position: absolute;
+            width: 100px;
+            height: 35px;
+            top: 175px;
+            right: 40px;
+            margin: 0%;
+            padding: 15px;
+        }
+        
+        .smallDiv7 {
+            position: absolute;
+            width: 100px;
+            height: 35px;
+            top: 255px;
+            left: 40px;
+            margin: 0%;
+            padding: 15px;
+        }
+        
+        .smallDiv8 {
+            position: absolute;
+            width: 100px;
+            height: 35px;
+            top: 255px;
+            right: 40px;
+            margin: 0%;
+            padding: 15px;
+        }
+        
+        .smallDiv9 {
+            position: absolute;
+            width: 100px;
+            height: 35px;
+            top: 335px;
+            left: 40px;
+            margin: 0%;
+            padding: 15px;
+        }
+        
+        .smallDiv10 {
+            position: absolute;
+            width: 100px;
+            height: 35px;
+            top: 335px;
+            right: 40px;
+            margin: 0%;
+            padding: 15px;
+        }
+        
+        .largeDiv2 {
+            position: relative;
+            float: right;
+            width: 400px;
+            height: 415px;
+            border: solid #02027A;
+            margin-top: 100px;
+            margin-right: 300px;
         }
     </style>
-    <script>
-        var b = 0;
-        b++;
-
-        function allowDrop1(event) {
-            event.preventDefault();
-
-        }
-
-        function drag1(event) {
-            event.dataTransfer.setData("one", event.target.id);
-
-        }
-
-        function drop1(event) {
-            event.preventDefault();
-
-            var data = event.dataTransfer.getData("one");
-
-            event.target.appendChild(document.getElementById(data));
-            score01.innerHTML = b++;
-            one.innerHTML = "[1]";
-            TestWinner(b, event);
-
-        }
-        //---------------------------------------------------------
-        function allowDrop2(event) {
-            event.preventDefault();
-
-        }
-
-        function drag2(event) {
-            event.dataTransfer.setData("two", event.target.id);
-        }
-
-        function drop2(event) {
-            event.preventDefault();
-            var data = event.dataTransfer.getData("two");
-            event.target.appendChild(document.getElementById(data));
-            score01.innerHTML = b++;
-            two.innerHTML = "[2]";
-            TestWinner(b, event);
-
-        }
-        //------------------------------------------------------------
-        function allowDrop3(event) {
-            event.preventDefault();
-
-        }
-
-        function drag3(event) {
-            event.dataTransfer.setData("three", event.target.id);
-        }
-
-        function drop3(event) {
-            event.preventDefault();
-            var data = event.dataTransfer.getData("three");
-            event.target.appendChild(document.getElementById(data));
-            score01.innerHTML = b++;
-            three.innerHTML = "[3]";
-            TestWinner(b, event);
-
-        }
-        //-------------------------------------------------------------
-        function allowDrop4(event) {
-            event.preventDefault();
-
-        }
-
-        function drag4(event) {
-            event.dataTransfer.setData("four", event.target.id);
-        }
-
-        function drop4(event) {
-            event.preventDefault();
-            var data = event.dataTransfer.getData("four");
-            event.target.appendChild(document.getElementById(data));
-            score01.innerHTML = b++;
-            four.innerHTML = "[4]";
-            TestWinner(b, event);
-
-        }
-        //-------------------------------------------------------------
-        function allowDrop5(event) {
-            event.preventDefault();
-
-        }
-
-        function drag5(event) {
-            event.dataTransfer.setData("five", event.target.id);
-        }
-
-        function drop5(event) {
-            event.preventDefault();
-            var data = event.dataTransfer.getData("five");
-            event.target.appendChild(document.getElementById(data));
-            score01.innerHTML = b++;
-            five.innerHTML = "[5]";
-            TestWinner(b, event);
-
-        }
-        //-------------------------------------------------------------
-        function allowDrop6(event) {
-            event.preventDefault();
-
-        }
-
-        function drag6(event) {
-            event.dataTransfer.setData("six", event.target.id);
-        }
-
-        function drop6(event) {
-            event.preventDefault();
-            var data = event.dataTransfer.getData("six");
-            event.target.appendChild(document.getElementById(data));
-            score01.innerHTML = b++;
-            six.innerHTML = "[6]";
-            TestWinner(b, event);
-
-        }
-        //-------------------------------------------------------------
-        function allowDrop7(event) {
-            event.preventDefault();
-
-        }
-
-        function drag7(event) {
-            event.dataTransfer.setData("seven", event.target.id);
-        }
-
-        function drop7(event) {
-            event.preventDefault();
-            var data = event.dataTransfer.getData("seven");
-            event.target.appendChild(document.getElementById(data));
-            score01.innerHTML = b++;
-            seven.innerHTML = "[7]";
-            TestWinner(b, event);
-
-        }
-        //-------------------------------------------------------------
-        function allowDrop8(event) {
-            event.preventDefault();
-
-        }
-
-        function drag8(event) {
-            event.dataTransfer.setData("eight", event.target.id);
-        }
-
-        function drop8(event) {
-            event.preventDefault();
-            var data = event.dataTransfer.getData("eight");
-            event.target.appendChild(document.getElementById(data));
-            score01.innerHTML = b++;
-            eight.innerHTML = "[8]";
-            TestWinner(b, event);
-
-        }
-        //-------------------------------------------------------------
-        function allowDrop9(event) {
-            event.preventDefault();
-
-        }
-
-        function drag9(event) {
-            event.dataTransfer.setData("nine", event.target.id);
-        }
-
-        function drop9(event) {
-            event.preventDefault();
-            var data = event.dataTransfer.getData("nine");
-            event.target.appendChild(document.getElementById(data));
-            score01.innerHTML = b++;
-            nine.innerHTML = "[9]";
-            TestWinner(b, event);
-
-        }
-        //-------------------------------------------------------------
-        function allowDrop10(event) {
-            event.preventDefault();
-
-        }
-
-        function drag10(event) {
-            event.dataTransfer.setData("ten", event.target.id);
-        }
-
-        function drop10(event) {
-
-            event.preventDefault();
-            var data = event.dataTransfer.getData("ten");
-            event.target.appendChild(document.getElementById(data));
-            score01.innerHTML = b++;
-            ten.innerHTML = "[10]";
-
-            TestWinner(b, event);
-
-        }
-        //-------------------------------------------------------------
-        function TestWinner(valid, event) {
-            console.log(valid)
-            event.target.style.border = "4px dotted green";
-            if (valid == 11) {
-
-                alert(" congratulation you are Winner ^_^");
-            }
-        }
-        //-------------------------------------------------------------
-    </script>
 </head>
 
 <body>
-
     <div id="Score" class="Score"><strong>Score:</strong> <text id="score01">0</text> </div>
-
     <h1 id="header" class="header"> Exploring Computer Science : Macthing Activity <br><br> Match the terms and definitions <br></h1>
-    <div id="div1">
-        <div class=" Sameline" ondrop="drop1(event)"><text ondragstart="drag1(event)" draggable="true" id="target01">[1]</text></div>
-        <div class=" Sameline" ondrop="drop2(event)"><text ondragstart="drag2(event)" draggable="true" id="target02">[2]</text></div>
-        <br/>
-        <div class=" Sameline" ondrop="drop3(event)"><text ondragstart="drag3(event)" draggable="true" id="target03">[3]</text></div>
-        <div class=" Sameline" ondrop="drop4(event)"><text ondragstart="drag4(event)" draggable="true" id="target04">[4]</text></div>
-        <br/>
-        <div class=" Sameline" ondrop="drop5(event)"><text ondragstart="drag5(event)" draggable="true" id="target05">[5]</text></div>
-        <div class=" Sameline" ondrop="drop6(event)"><text ondragstart="drag6(event)" draggable="true" id="target06">[6]</text></div>
-        <br/>
-        <div class=" Sameline" ondrop="drop7(event)"><text ondragstart="drag7(event)" draggable="true" id="target07">[7]</text></div>
-        <div class=" Sameline" ondrop="drop8(event)"><text ondragstart="drag8(event)" draggable="true" id="target08">[8]</text></div>
-        <br/>
-        <div class=" Sameline" ondrop="drop9(event)"><text ondragstart="drag9(event)" draggable="true" id="target09">[9]</text></div>
-        <div class=" Sameline" ondrop="drop10(event)"><text ondragstart="drag10(event)" draggable="true" id="target010">[10]</text></div>
-        <br/>
+
+    <div class="largeDiv" style="background-color:#067C07">
+
+        <div class="smallDiv1" ondrop="drop1(event)" style="background-color:	#666668;display: inline" id="div1"> </div>
+        <div class="smallDiv1" ondragstart="drag1(event)" draggable="true" id="target01">one</div>
+
+        <div class="smallDiv2" ondrop="drop2(event)" style="background-color:	#666668;display: inline " id="div2">
+        </div>
+        <div class="smallDiv2" ondragstart="drag2(event)" draggable="true" id="target02">two</div>
+
+
+        <div class="smallDiv3" ondrop="drop3(event)" style="background-color:	#666668;display: inline" id="div3">
+        </div>
+        <div class="smallDiv3" ondragstart="drag3(event)" draggable="true" id="target03">three</div>
+
+
+        <div class="smallDiv4" ondrop="drop4(event)" style="background-color:	#666668;display: inline" id="div4">
+        </div>
+        <div class="smallDiv4" ondragstart="drag4(event)" draggable="true" id="target04">four</div>
+
+
+        <div class="smallDiv5" ondrop="drop5(event)" style="background-color:	#666668;display: inline" id="div5">
+        </div>
+        <div class="smallDiv5" ondragstart="drag5(event)" draggable="true" id="target05">five</div>
+
+
+        <div class="smallDiv6" ondrop="drop6(event)" style="background-color:	#666668;display: inline" id="div6">
+        </div>
+        <div class="smallDiv6" ondragstart="drag6(event)" draggable="true" id="target06">six</div>
+
+        <div class="smallDiv7" ondrop="drop7(event)" style="background-color:	#666668;display: inline" id="div7">
+        </div>
+        <div class="smallDiv7" ondragstart="drag7(event)" draggable="true" id="target07">seven</div>
+
+
+        <div class="smallDiv8" ondrop="drop8(event)" style="background-color:	#666668;display: inline" id="div8">
+        </div>
+        <div class="smallDiv8" ondragstart="drag8(event)" draggable="true" id="target08">eight</div>
+
+        <div class="smallDiv9" ondrop="drop9(event)" style="background-color:	#666668;display: inline" id="div9">
+        </div>
+        <div class="smallDiv9" ondragstart="drag9(event)" draggable="true" id="target09">nine</div>
+
+        <div class="smallDiv10" ondrop="drop10(event)" style="background-color:	#666668;display: inline" id="div10">
+        </div>
+        <div class="smallDiv10" ondragstart="drag10(event)" draggable="true" id="target010">ten</div>
 
 
     </div>
 
-
-    <div id="div2">
-        <div class=" Sameline" ondrop="drop1(event)" ondragover="allowDrop1(event)" id="one"><pre>one  </pre></div>
-        <div class=" Sameline" ondrop="drop2(event)" ondragover="allowDrop2(event)" id="two"><pre>two</pre></div>
-        <br/>
-        <div class=" Sameline" ondrop="drop3(event)" ondragover="allowDrop3(event)" id="three"><pre>three</pre></div>
-        <div class=" Sameline" ondrop="drop4(event)" ondragover="allowDrop4(event)" id="four"><pre>four </pre></div>
-        <br/>
-        <div class=" Sameline" ondrop="drop5(event)" ondragover="allowDrop5(event)" id="five"><pre>five </pre></div>
-        <div class=" Sameline" ondrop="drop6(event)" ondragover="allowDrop6(event)" id="six"><pre>six  </pre></div>
-        <br/>
-        <div class=" Sameline" ondrop="drop7(event)" ondragover="allowDrop7(event)" id="seven"><pre>seven</pre></div>
-        <div class=" Sameline" ondrop="drop8(event)" ondragover="allowDrop8(event)" id="eight"><pre>eight</pre></div>
-        <br/>
-        <div class=" Sameline" ondrop="drop9(event)" ondragover="allowDrop9(event)" id="nine"><pre>nine </pre></div>
-        <div class=" Sameline" ondrop="drop10(event)" ondragover="allowDrop10(event)" id="ten"><pre>ten  </pre></div>
-
+    <div class="largeDiv2" style="background-color:#02027A">
+        <div class="smallDiv1" ondrop="drop1(event)" ondragover="allowDrop1(event)" id="one" style="background-color:	#FFFFFE;display: inline">1</div>
+        <div class="smallDiv2" ondrop="drop2(event)" ondragover="allowDrop2(event)" id="two" style="background-color:	#FFFFFE;display: inline">2</div>
+        <div class="smallDiv3" ondrop="drop3(event)" ondragover="allowDrop3(event)" id="three" style="background-color:	#FFFFFE;display: inline">3</div>
+        <div class="smallDiv4" ondrop="drop4(event)" ondragover="allowDrop4(event)" id="four" style="background-color:	#FFFFFE;display: inline">4</div>
+        <div class="smallDiv5" ondrop="drop5(event)" ondragover="allowDrop5(event)" id="five" style="background-color:	#FFFFFE;display: inline">5</div>
+        <div class="smallDiv6" ondrop="drop6(event)" ondragover="allowDrop6(event)" id="six" style="background-color:	#FFFFFE;display: inline">6</div>
+        <div class="smallDiv7" ondrop="drop7(event)" ondragover="allowDrop7(event)" id="seven" style="background-color:	#FFFFFE;display: inline">7</div>
+        <div class="smallDiv8" ondrop="drop8(event)" ondragover="allowDrop8(event)" id="eight" style="background-color:	#FFFFFE;display: inline">8</div>
+        <div class="smallDiv9" ondrop="drop9(event)" ondragover="allowDrop9(event)" id="nine" style="background-color:	#FFFFFE;display: inline">9</div>
+        <div class="smallDiv10" ondrop="drop10(event)" ondragover="allowDrop10(event)" id="ten" style="background-color:	#FFFFFE;display: inline">10</div>
 
     </div>
-
-
-
-    <img src="C:/Users/DELL/Desktop/Training/tree.png" alt="Smiley face" style="float: right; margin-top: 170px;">
-
-
 
 
 
 </body>
+
+<script>
+    var b = 0;
+    b++;
+    //-------------------------------------------------------------
+    function TestWinner(valid, event) {
+        console.log(valid)
+        event.target.style.color = "blue";
+
+        if (valid == 11) {
+            setTimeout('alert(" congratulation you are Winner ^_^");', 2);
+
+        }
+    }
+    //-------------------------------------------------------------
+
+    function allowDrop1(event) {
+        event.preventDefault();
+
+    }
+
+    function drag1(event) {
+        event.dataTransfer.setData("one", event.target.id);
+
+    }
+
+    function drop1(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("one");
+        event.target.appendChild(document.getElementById(data));
+        score01.innerHTML = b++;
+        one.innerHTML = "1";
+        event.target.style.background = "#FD0100";
+        div1.style.background = "#067C07";
+        TestWinner(b, event);
+    }
+    //---------------------------------------------------------
+    function allowDrop2(event) {
+        event.preventDefault();
+    }
+
+    function drag2(event) {
+        event.dataTransfer.setData("two", event.target.id);
+    }
+
+    function drop2(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("two");
+        event.target.appendChild(document.getElementById(data));
+        two.innerHTML = "2";
+        score01.innerHTML = b++;
+        event.target.style.background = "#9E2D2E";
+        div2.style.background = "#067C07";
+        TestWinner(b, event);
+    }
+    //------------------------------------------------------------
+    function allowDrop3(event) {
+        event.preventDefault();
+    }
+
+    function drag3(event) {
+        event.dataTransfer.setData("three", event.target.id);
+    }
+
+    function drop3(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("three");
+        event.target.appendChild(document.getElementById(data));
+        three.innerHTML = "3";
+        score01.innerHTML = b++;
+        event.target.style.background = "#FFA203";
+        div3.style.background = "#067C07";
+
+        TestWinner(b, event);
+    }
+    //---------------------------------------------------------
+    function allowDrop4(event) {
+        event.preventDefault();
+    }
+
+    function drag4(event) {
+        event.dataTransfer.setData("four", event.target.id);
+    }
+
+    function drop4(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("four");
+        event.target.appendChild(document.getElementById(data));
+        four.innerHTML = "4";
+        score01.innerHTML = b++;
+        event.target.style.background = "#FFFC05";
+        div4.style.background = "#067C07";
+
+        TestWinner(b, event);
+    }
+    //---------------------------------------------------------
+    function allowDrop5(event) {
+        event.preventDefault();
+    }
+
+    function drag5(event) {
+        event.dataTransfer.setData("five", event.target.id);
+    }
+
+    function drop5(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("five");
+        event.target.appendChild(document.getElementById(data));
+        five.innerHTML = "5";
+        score01.innerHTML = b++;
+        event.target.style.background = "#008002";
+        div5.style.background = "#067C07";
+
+        TestWinner(b, event);
+    }
+    //------------------------------------------------------
+    function allowDrop6(event) {
+        event.preventDefault();
+    }
+
+    function drag6(event) {
+        event.dataTransfer.setData("six", event.target.id);
+    }
+
+    function drop6(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("six");
+        event.target.appendChild(document.getElementById(data));
+        six.innerHTML = "6";
+        score01.innerHTML = b++;
+        event.target.style.background = "#04FDFC";
+        div6.style.background = "#067C07";
+
+        TestWinner(b, event);
+    }
+    //------------------------------------------------------
+    function allowDrop7(event) {
+        event.preventDefault();
+    }
+
+    function drag7(event) {
+        event.dataTransfer.setData("seven", event.target.id);
+    }
+
+    function drop7(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("seven");
+        event.target.appendChild(document.getElementById(data));
+        seven.innerHTML = "7";
+        score01.innerHTML = b++;
+        event.target.style.background = "#0200FC";
+        div7.style.background = "#067C07";
+
+        TestWinner(b, event);
+    }
+    //------------------------------------------------------
+    function allowDrop8(event) {
+        event.preventDefault();
+    }
+
+    function drag8(event) {
+        event.dataTransfer.setData("eight", event.target.id);
+    }
+
+    function drop8(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("eight");
+        event.target.appendChild(document.getElementById(data));
+        eight.innerHTML = "8";
+        score01.innerHTML = b++;
+        event.target.style.background = "#40067E";
+        div8.style.background = "#067C07";
+
+        TestWinner(b, event);
+    }
+    //------------------------------------------------------
+    function allowDrop9(event) {
+        event.preventDefault();
+    }
+
+    function drag9(event) {
+        event.dataTransfer.setData("nine", event.target.id);
+    }
+
+    function drop9(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("nine");
+        event.target.appendChild(document.getElementById(data));
+        nine.innerHTML = "9";
+        score01.innerHTML = b++;
+        event.target.style.background = "#7F017F";
+        div9.style.background = "#067C07";
+
+        TestWinner(b, event);
+    }
+    //------------------------------------------------------
+    function allowDrop10(event) {
+        event.preventDefault();
+    }
+
+    function drag10(event) {
+        event.dataTransfer.setData("ten", event.target.id);
+    }
+
+    function drop10(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("ten");
+        event.target.appendChild(document.getElementById(data));
+
+        ten.innerHTML = "10";
+        score01.innerHTML = b++;
+        event.target.style.background = "#EE82F0";
+        div10.style.background = "#067C07";
+
+        TestWinner(b, event);
+    }
+    //------------------------------------------------------
+</script>
 
 </html>
