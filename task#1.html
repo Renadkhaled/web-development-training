@@ -13,7 +13,7 @@
     <!-- first make the margion 0 (clear it) then control it -->
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:"Comic Sans MS", cursive, sans-serif;
             background-color: #FFFFFD;
             background-repeat: no-repeat;
             background-size: cover;
@@ -34,7 +34,7 @@
         }
         
         #par {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:"Comic Sans MS", cursive, sans-serif;
             font-size: 35px;
             margin: 0%;
             margin-left: 2%;
@@ -49,7 +49,7 @@
             padding: 10px;
             left: 10px;
             top: 200px;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:"Comic Sans MS", cursive, sans-serif;
             border: 1px solid rgba(0, 0, 0, 0.021);
             font-size: 20px;
         }
@@ -66,6 +66,7 @@
         
         .smallDiv1 {
             position: absolute;
+            text-align:center;
             width: 100px;
             height: 35px;
             top: 15px;
@@ -76,6 +77,8 @@
         
         .smallDiv2 {
             position: absolute;
+            text-align:center;
+
             width: 100px;
             height: 35px;
             top: 15px;
@@ -86,6 +89,8 @@
         
         .smallDiv3 {
             position: absolute;
+            text-align:center;
+
             width: 100px;
             height: 35px;
             top: 95px;
@@ -96,6 +101,8 @@
         
         .smallDiv4 {
             position: absolute;
+            text-align:center;
+
             width: 100px;
             height: 35px;
             top: 95px;
@@ -106,6 +113,8 @@
         
         .smallDiv5 {
             position: absolute;
+            text-align:center;
+
             width: 100px;
             height: 35px;
             top: 175px;
@@ -116,6 +125,8 @@
         
         .smallDiv6 {
             position: absolute;
+            text-align:center;
+
             width: 100px;
             height: 35px;
             top: 175px;
@@ -126,6 +137,8 @@
         
         .smallDiv7 {
             position: absolute;
+            text-align:center;
+
             width: 100px;
             height: 35px;
             top: 255px;
@@ -136,6 +149,8 @@
         
         .smallDiv8 {
             position: absolute;
+            text-align:center;
+
             width: 100px;
             height: 35px;
             top: 255px;
@@ -146,6 +161,8 @@
         
         .smallDiv9 {
             position: absolute;
+            text-align:center;
+
             width: 100px;
             height: 35px;
             top: 335px;
@@ -156,6 +173,8 @@
         
         .smallDiv10 {
             position: absolute;
+            text-align:center;
+
             width: 100px;
             height: 35px;
             top: 335px;
@@ -248,13 +267,12 @@
 </body>
 
 <script>
-    //------------------------------------------------------
     var b = 0;
     b++;
     //-------------------------------------------------------------
     function TestWinner(valid, event) {
         console.log(valid)
-        event.target.style.color = "blue";
+        event.target.style.color = "black";
 
         if (valid == 11) {
             setTimeout('alert(" congratulation you are Winner ^_^");', 2);
