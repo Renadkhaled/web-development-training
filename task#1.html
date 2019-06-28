@@ -11,188 +11,8 @@
     <meta name="width=device-width, initial-scale=1">
     <!-- HTML style CSS -->
     <!-- first make the margion 0 (clear it) then control it -->
-    <style>
-        body {
-            font-family:"Comic Sans MS", cursive, sans-serif;
-            background-color: #FFFFFD;
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin: 0%;
-        }
-        
-        #header {
-            border: 1px solid black;
-            background-color: #ECEDF2;
-            padding: 30px;
-            text-align: center;
-            font-size: 20px;
-            color: #36575E;
-            margin: 0%;
-            margin-left: 1%;
-            margin-right: 1%;
-            margin-top: 1%;
-        }
-        
-        #par {
-            font-family:"Comic Sans MS", cursive, sans-serif;
-            font-size: 35px;
-            margin: 0%;
-            margin-left: 2%;
-            margin-right: 2%;
-            margin-top: 2%;
-        }
-        
-        #Score {
-            position: absolute;
-            width: 80px;
-            height: 15px;
-            padding: 10px;
-            left: 10px;
-            top: 200px;
-            font-family:"Comic Sans MS", cursive, sans-serif;
-            border: 1px solid rgba(0, 0, 0, 0.021);
-            font-size: 20px;
-        }
-        
-        .largeDiv {
-            position: relative;
-            float: left;
-            width: 400px;
-            height: 415px;
-            border: solid green;
-            margin-top: 100px;
-            margin-left: 300px;
-        }
-        
-        .smallDiv1 {
-            position: absolute;
-            text-align:center;
-            width: 100px;
-            height: 35px;
-            top: 15px;
-            left: 40px;
-            margin: 0%;
-            padding: 15px;
-        }
-        
-        .smallDiv2 {
-            position: absolute;
-            text-align:center;
-
-            width: 100px;
-            height: 35px;
-            top: 15px;
-            right: 40px;
-            margin: 0%;
-            padding: 15px;
-        }
-        
-        .smallDiv3 {
-            position: absolute;
-            text-align:center;
-
-            width: 100px;
-            height: 35px;
-            top: 95px;
-            left: 40px;
-            margin: 0%;
-            padding: 15px;
-        }
-        
-        .smallDiv4 {
-            position: absolute;
-            text-align:center;
-
-            width: 100px;
-            height: 35px;
-            top: 95px;
-            right: 40px;
-            margin: 0%;
-            padding: 15px;
-        }
-        
-        .smallDiv5 {
-            position: absolute;
-            text-align:center;
-
-            width: 100px;
-            height: 35px;
-            top: 175px;
-            left: 40px;
-            margin: 0%;
-            padding: 15px;
-        }
-        
-        .smallDiv6 {
-            position: absolute;
-            text-align:center;
-
-            width: 100px;
-            height: 35px;
-            top: 175px;
-            right: 40px;
-            margin: 0%;
-            padding: 15px;
-        }
-        
-        .smallDiv7 {
-            position: absolute;
-            text-align:center;
-
-            width: 100px;
-            height: 35px;
-            top: 255px;
-            left: 40px;
-            margin: 0%;
-            padding: 15px;
-        }
-        
-        .smallDiv8 {
-            position: absolute;
-            text-align:center;
-
-            width: 100px;
-            height: 35px;
-            top: 255px;
-            right: 40px;
-            margin: 0%;
-            padding: 15px;
-        }
-        
-        .smallDiv9 {
-            position: absolute;
-            text-align:center;
-
-            width: 100px;
-            height: 35px;
-            top: 335px;
-            left: 40px;
-            margin: 0%;
-            padding: 15px;
-        }
-        
-        .smallDiv10 {
-            position: absolute;
-            text-align:center;
-
-            width: 100px;
-            height: 35px;
-            top: 335px;
-            right: 40px;
-            margin: 0%;
-            padding: 15px;
-        }
-        
-        .largeDiv2 {
-            position: relative;
-            float: right;
-            width: 400px;
-            height: 415px;
-            border: solid #02027A;
-            margin-top: 100px;
-            margin-right: 300px;
-        }
-    </style>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -204,284 +24,57 @@
         <div class="smallDiv1" ondrop="drop1(event)" style="background-color:	#666668;display: inline" id="div1"> </div>
         <div class="smallDiv1" ondragstart="drag1(event)" draggable="true" id="target01">one</div>
 
-        <div class="smallDiv2" ondrop="drop2(event)" style="background-color:	#666668;display: inline " id="div2">
-        </div>
-        <div class="smallDiv2" ondragstart="drag2(event)" draggable="true" id="target02">two</div>
+        <div class="smallDiv1" ondrop="drop2(event)" style="background-color:	#666668;display: inline; right:40px !important;left: 230px !important;" id="div2"></div>
+        <div class="smallDiv1" ondragstart="drag2(event)" draggable="true" id="target02" style=" right:40px !important ;left: 230px !important">two</div>
 
 
-        <div class="smallDiv3" ondrop="drop3(event)" style="background-color:	#666668;display: inline" id="div3">
-        </div>
-        <div class="smallDiv3" ondragstart="drag3(event)" draggable="true" id="target03">three</div>
+        <div class="smallDiv1" ondrop="drop3(event)" style="background-color:	#666668;display: inline; right:230px !important;left: 40px !important;top:95px !important; " id="div3"></div>
+        <div class="smallDiv1" ondragstart="drag3(event)" draggable="true" id="target03" style=" right:230px !important;left: 40px !important;top:95px !important;">three</div>
 
 
-        <div class="smallDiv4" ondrop="drop4(event)" style="background-color:	#666668;display: inline" id="div4">
-        </div>
-        <div class="smallDiv4" ondragstart="drag4(event)" draggable="true" id="target04">four</div>
+        <div class="smallDiv1" ondrop="drop4(event)" style="background-color:	#666668;display: inline ;right:40px !important;left: 230px !important;top:95px !important;" id="div4"></div>
+        <div class="smallDiv1" ondragstart="drag4(event)" draggable="true" id="target04" style=" right:40px !important;left: 230px !important;top:95px !important;">four</div>
 
 
-        <div class="smallDiv5" ondrop="drop5(event)" style="background-color:	#666668;display: inline" id="div5">
-        </div>
-        <div class="smallDiv5" ondragstart="drag5(event)" draggable="true" id="target05">five</div>
+        <div class="smallDiv1" ondrop="drop5(event)" style="background-color:	#666668;display: inline ;right:230px !important;left: 40px !important;top:175px !important;" id="div5"> </div>
+        <div class="smallDiv1" ondragstart="drag5(event)" draggable="true" id="target05" style="right:230px !important;left: 40px !important;top:175px !important;">five</div>
 
 
-        <div class="smallDiv6" ondrop="drop6(event)" style="background-color:	#666668;display: inline" id="div6">
-        </div>
-        <div class="smallDiv6" ondragstart="drag6(event)" draggable="true" id="target06">six</div>
+        <div class="smallDiv1" ondrop="drop6(event)" style="background-color:	#666668;display: inline ;right:40px !important;left: 230px !important;top:175px !important;" id="div6"></div>
+        <div class="smallDiv1" ondragstart="drag6(event)" draggable="true" id="target06" style="right:40px !important;left: 230px !important;top:175px !important;">six</div>
 
-        <div class="smallDiv7" ondrop="drop7(event)" style="background-color:	#666668;display: inline" id="div7">
-        </div>
-        <div class="smallDiv7" ondragstart="drag7(event)" draggable="true" id="target07">seven</div>
+        <div class="smallDiv1" ondrop="drop7(event)" style="background-color:	#666668;display: inline ;right:230px !important;left: 40px !important;top:255px !important;" id="div7"></div>
+        <div class="smallDiv1" ondragstart="drag7(event)" draggable="true" id="target07" style="right:230px !important;left: 40px !important;top:255px !important;">seven</div>
 
 
-        <div class="smallDiv8" ondrop="drop8(event)" style="background-color:	#666668;display: inline" id="div8">
-        </div>
-        <div class="smallDiv8" ondragstart="drag8(event)" draggable="true" id="target08">eight</div>
+        <div class="smallDiv1" ondrop="drop8(event)" style="background-color:	#666668;display: inline ;right:40px !important;left: 230px !important;top:255px !important;" id="div8"></div>
+        <div class="smallDiv1" ondragstart="drag8(event)" draggable="true" id="target08" style="right:40px !important;left: 230px !important;top:255px !important;">eight</div>
 
-        <div class="smallDiv9" ondrop="drop9(event)" style="background-color:	#666668;display: inline" id="div9">
-        </div>
-        <div class="smallDiv9" ondragstart="drag9(event)" draggable="true" id="target09">nine</div>
+        <div class="smallDiv1" ondrop="drop9(event)" style="background-color:	#666668;display: inline ;right:230px !important;left: 40px !important;top:335px !important;" id="div9"></div>
+        <div class="smallDiv1" ondragstart="drag9(event)" draggable="true" id="target09" style="right:230px !important;left: 40px !important;top:335px !important;">nine</div>
 
-        <div class="smallDiv10" ondrop="drop10(event)" style="background-color:	#666668;display: inline" id="div10">
-        </div>
-        <div class="smallDiv10" ondragstart="drag10(event)" draggable="true" id="target010">ten</div>
+        <div class="smallDiv1" ondrop="drop10(event)" style="background-color:	#666668;display: inline ;right:40px !important;left: 230px !important;top:335px !important;" id="div10"></div>
+        <div class="smallDiv1" ondragstart="drag10(event)" draggable="true" id="target010" style="right:40px !important;left: 230px !important;top:335px !important;">ten</div>
 
 
     </div>
 
     <div class="largeDiv2" style="background-color:#02027A">
-        <div class="smallDiv1" ondrop="drop1(event)" ondragover="allowDrop1(event)" id="one" style="background-color:	#FFFFFE;display: inline">1</div>
-        <div class="smallDiv2" ondrop="drop2(event)" ondragover="allowDrop2(event)" id="two" style="background-color:	#FFFFFE;display: inline">2</div>
-        <div class="smallDiv3" ondrop="drop3(event)" ondragover="allowDrop3(event)" id="three" style="background-color:	#FFFFFE;display: inline">3</div>
-        <div class="smallDiv4" ondrop="drop4(event)" ondragover="allowDrop4(event)" id="four" style="background-color:	#FFFFFE;display: inline">4</div>
-        <div class="smallDiv5" ondrop="drop5(event)" ondragover="allowDrop5(event)" id="five" style="background-color:	#FFFFFE;display: inline">5</div>
-        <div class="smallDiv6" ondrop="drop6(event)" ondragover="allowDrop6(event)" id="six" style="background-color:	#FFFFFE;display: inline">6</div>
-        <div class="smallDiv7" ondrop="drop7(event)" ondragover="allowDrop7(event)" id="seven" style="background-color:	#FFFFFE;display: inline">7</div>
-        <div class="smallDiv8" ondrop="drop8(event)" ondragover="allowDrop8(event)" id="eight" style="background-color:	#FFFFFE;display: inline">8</div>
-        <div class="smallDiv9" ondrop="drop9(event)" ondragover="allowDrop9(event)" id="nine" style="background-color:	#FFFFFE;display: inline">9</div>
-        <div class="smallDiv10" ondrop="drop10(event)" ondragover="allowDrop10(event)" id="ten" style="background-color:	#FFFFFE;display: inline">10</div>
+        <div class="smallDiv1" ondrop="drop1(event)" ondragover="allowDrop(event)" id="one" style="background-color:	#FFFFFE;display: inline">1</div>
+        <div class="smallDiv1" ondrop="drop2(event)" ondragover="allowDrop(event)" id="two" style="background-color:	#FFFFFE;display: inline; right:40px !important;left: 230px !important;">2</div>
+        <div class="smallDiv1" ondrop="drop3(event)" ondragover="allowDrop(event)" id="three" style="background-color:	#FFFFFE;display: inline; right:230px !important;left: 40px !important;top:95px !important; ">3</div>
+        <div class="smallDiv1" ondrop="drop4(event)" ondragover="allowDrop(event)" id="four" style="background-color:	#FFFFFE;display: inline ;right:40px !important;left: 230px !important;top:95px !important;">4</div>
+        <div class="smallDiv1" ondrop="drop5(event)" ondragover="allowDrop(event)" id="five" style="background-color:	#FFFFFE;display: inline;right:230px !important;left: 40px !important;top:175px !important;">5</div>
+        <div class="smallDiv1" ondrop="drop6(event)" ondragover="allowDrop(event)" id="six" style="background-color:	#FFFFFE;display: inline;right:40px !important;left: 230px !important;top:175px !important;">6</div>
+        <div class="smallDiv1" ondrop="drop7(event)" ondragover="allowDrop(event)" id="seven" style="background-color:	#FFFFFE;display: inline ;right:230px !important;left: 40px !important;top:255px !important;">7</div>
+        <div class="smallDiv1" ondrop="drop8(event)" ondragover="allowDrop(event)" id="eight" style="background-color:	#FFFFFE;display: inline;right:40px !important;left: 230px !important;top:255px !important;">8</div>
+        <div class="smallDiv1" ondrop="drop9(event)" ondragover="allowDrop(event)" id="nine" style="background-color:	#FFFFFE;display: inline;right:230px !important;left: 40px !important;top:335px !important;">9</div>
+        <div class="smallDiv1" ondrop="drop10(event)" ondragover="allowDrop(event)" id="ten" style="background-color:#FFFFFE;display: inline;right:40px !important;left: 230px !important;top:335px !important;">10</div>
 
     </div>
 
 
 
 </body>
-
-<script>
-    var b = 0;
-    b++;
-    //-------------------------------------------------------------
-    function TestWinner(valid, event) {
-        console.log(valid)
-        event.target.style.color = "black";
-
-        if (valid == 11) {
-            setTimeout('alert(" congratulation you are Winner ^_^");', 2);
-
-        }
-    }
-    //-------------------------------------------------------------
-
-    function allowDrop1(event) {
-        event.preventDefault();
-
-    }
-
-    function drag1(event) {
-        event.dataTransfer.setData("one", event.target.id);
-
-    }
-
-    function drop1(event) {
-        event.preventDefault();
-        var data = event.dataTransfer.getData("one");
-        event.target.appendChild(document.getElementById(data));
-        score01.innerHTML = b++;
-        one.innerHTML = "1";
-        event.target.style.background = "#FD0100";
-        div1.style.background = "#067C07";
-        TestWinner(b, event);
-    }
-    //---------------------------------------------------------
-    function allowDrop2(event) {
-        event.preventDefault();
-    }
-
-    function drag2(event) {
-        event.dataTransfer.setData("two", event.target.id);
-    }
-
-    function drop2(event) {
-        event.preventDefault();
-        var data = event.dataTransfer.getData("two");
-        event.target.appendChild(document.getElementById(data));
-        two.innerHTML = "2";
-        score01.innerHTML = b++;
-        event.target.style.background = "#9E2D2E";
-        div2.style.background = "#067C07";
-        TestWinner(b, event);
-    }
-    //------------------------------------------------------------
-    function allowDrop3(event) {
-        event.preventDefault();
-    }
-
-    function drag3(event) {
-        event.dataTransfer.setData("three", event.target.id);
-    }
-
-    function drop3(event) {
-        event.preventDefault();
-        var data = event.dataTransfer.getData("three");
-        event.target.appendChild(document.getElementById(data));
-        three.innerHTML = "3";
-        score01.innerHTML = b++;
-        event.target.style.background = "#FFA203";
-        div3.style.background = "#067C07";
-
-        TestWinner(b, event);
-    }
-    //---------------------------------------------------------
-    function allowDrop4(event) {
-        event.preventDefault();
-    }
-
-    function drag4(event) {
-        event.dataTransfer.setData("four", event.target.id);
-    }
-
-    function drop4(event) {
-        event.preventDefault();
-        var data = event.dataTransfer.getData("four");
-        event.target.appendChild(document.getElementById(data));
-        four.innerHTML = "4";
-        score01.innerHTML = b++;
-        event.target.style.background = "#FFFC05";
-        div4.style.background = "#067C07";
-
-        TestWinner(b, event);
-    }
-    //---------------------------------------------------------
-    function allowDrop5(event) {
-        event.preventDefault();
-    }
-
-    function drag5(event) {
-        event.dataTransfer.setData("five", event.target.id);
-    }
-
-    function drop5(event) {
-        event.preventDefault();
-        var data = event.dataTransfer.getData("five");
-        event.target.appendChild(document.getElementById(data));
-        five.innerHTML = "5";
-        score01.innerHTML = b++;
-        event.target.style.background = "#008002";
-        div5.style.background = "#067C07";
-
-        TestWinner(b, event);
-    }
-    //------------------------------------------------------
-    function allowDrop6(event) {
-        event.preventDefault();
-    }
-
-    function drag6(event) {
-        event.dataTransfer.setData("six", event.target.id);
-    }
-
-    function drop6(event) {
-        event.preventDefault();
-        var data = event.dataTransfer.getData("six");
-        event.target.appendChild(document.getElementById(data));
-        six.innerHTML = "6";
-        score01.innerHTML = b++;
-        event.target.style.background = "#04FDFC";
-        div6.style.background = "#067C07";
-
-        TestWinner(b, event);
-    }
-    //------------------------------------------------------
-    function allowDrop7(event) {
-        event.preventDefault();
-    }
-
-    function drag7(event) {
-        event.dataTransfer.setData("seven", event.target.id);
-    }
-
-    function drop7(event) {
-        event.preventDefault();
-        var data = event.dataTransfer.getData("seven");
-        event.target.appendChild(document.getElementById(data));
-        seven.innerHTML = "7";
-        score01.innerHTML = b++;
-        event.target.style.background = "#0200FC";
-        div7.style.background = "#067C07";
-
-        TestWinner(b, event);
-    }
-    //------------------------------------------------------
-    function allowDrop8(event) {
-        event.preventDefault();
-    }
-
-    function drag8(event) {
-        event.dataTransfer.setData("eight", event.target.id);
-    }
-
-    function drop8(event) {
-        event.preventDefault();
-        var data = event.dataTransfer.getData("eight");
-        event.target.appendChild(document.getElementById(data));
-        eight.innerHTML = "8";
-        score01.innerHTML = b++;
-        event.target.style.background = "#40067E";
-        div8.style.background = "#067C07";
-
-        TestWinner(b, event);
-    }
-    //------------------------------------------------------
-    function allowDrop9(event) {
-        event.preventDefault();
-    }
-
-    function drag9(event) {
-        event.dataTransfer.setData("nine", event.target.id);
-    }
-
-    function drop9(event) {
-        event.preventDefault();
-        var data = event.dataTransfer.getData("nine");
-        event.target.appendChild(document.getElementById(data));
-        nine.innerHTML = "9";
-        score01.innerHTML = b++;
-        event.target.style.background = "#7F017F";
-        div9.style.background = "#067C07";
-
-        TestWinner(b, event);
-    }
-    //------------------------------------------------------
-    function allowDrop10(event) {
-        event.preventDefault();
-    }
-
-    function drag10(event) {
-        event.dataTransfer.setData("ten", event.target.id);
-    }
-
-    function drop10(event) {
-        event.preventDefault();
-        var data = event.dataTransfer.getData("ten");
-        event.target.appendChild(document.getElementById(data));
-
-        ten.innerHTML = "10";
-        score01.innerHTML = b++;
-        event.target.style.background = "#EE82F0";
-        div10.style.background = "#067C07";
-
-        TestWinner(b, event);
-    }
-    //------------------------------------------------------
-</script>
 
 </html>
